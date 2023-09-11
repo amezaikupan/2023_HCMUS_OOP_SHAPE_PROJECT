@@ -1,0 +1,23 @@
+// pch.cpp: source file corresponding to the pre-compiled header
+#include "pch.h"
+
+// When you are using pre-compiled headers, this source file is necessary for compilation to succeed.
+#include "../Shape/Circle.cpp"
+#include "../Shape/Rectangle.cpp"
+#include "../Shape/RegularHexagon.cpp"
+#include "../Shape/RegularOctagon.cpp"
+#include "../Shape/RegularPentagon.cpp"
+#include "../Shape/Square.cpp"
+#include "../Shape/Triangle.cpp"
+#include "../Shape/IShape.cpp"
+#include "../Shape/IParser.cpp"
+#include "../Shape/ParserFactory.cpp"
+#include "../Shape/CircleParser.cpp"
+#include "../Shape/RectangleParser.cpp"
+#include "../Shape/RegularHexagonParser.cpp"
+#include "../Shape/RegularOctagonParser.cpp"
+#include "../Shape/RegularPentagonParser.cpp"
+#include "../Shape/SquareParser.cpp"
+#include "../Shape/TriangleParser.cpp"
+#include "../Shape/FileHandler.cpp"
+#include "../Shape/PrintHandler.cpp"
