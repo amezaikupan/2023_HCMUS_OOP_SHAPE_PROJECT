@@ -1,11 +1,12 @@
-# Đồ án Shape - Lập trình hướng đối tượng 21_3
-MSSV: 21120308  
-Họ và tên: Phạm Lê Tú Nhi  
-Email: pltnhi11@gmail.com
-## Về cấu trúc dự án và yêu cầu biên dịch
+# Shape Project - Object-Oriented Programming 21_3
+**Student ID:** 21120308  
+**Name:** Pham Le Tu Nhi  
+**Email:** pltnhi11@gmail.com
+
+## Project Structure and Compilation Requirements
 ---
-### 1. Cấu trúc đồ án
-Đồ án được thiết kết theo sơ đồ file sau:
+### 1. Project Structure
+The project is structured according to the following file diagram:
 
 ```
 └── Source code
@@ -74,98 +75,98 @@ Email: pltnhi11@gmail.com
 └── readme.txt
 ```
 **Shape Directory**  
-Trong folder Shape chứa các file:
-- Các lớp ảo, các lớp hình được thừa kế, lớp Factory và các lớp parse dữ liệu cho các lớp hình.
-- Các lớp chức năng đọc file, in dữ liệu.
+In the Shape folder, you'll find the following files:
+- Virtual classes, inherited shape classes, Factory class, and data parsing classes for different shapes.
+- File handling and data printing utility classes.
 
-Trong folder UnitTest chứa các file:
-- Các lớp Test (sử dụng Microsoft Framework) các lớp hình và parser của nó.   
+In the UnitTest folder, you'll find files for:
+- Test classes (using Microsoft Framework) for shape classes and their parsers.
 
 **Release Directory**
-- File data.txt có chứa dữ liệu dùng để chạy file.
-- Shape.exe là file execuable của chương trình.
+- The data.txt file contains the data used for execution.
+- Shape.exe is the executable file of the program.
 
-### 2. Yêu cầu biên dịch và thông tin hệ thống  
+### 2. Compilation Requirements and System Information
 
-**Yêu cầu biên dịch**  
-Chương trình Shape.exe cần đọc dữ liệu từ file data.txt để biên dịch. Thông tin này đã được cung cấp đầy đủ trong folder Release.
+**Compilation Requirements**  
+The Shape.exe program needs to read data from the data.txt file for compilation. This information is provided in the Release folder.
 
-**Thông tin hệ thống**  
-Hệ điều hành: Window 10 Home Single Language.  
-IDE: Visual Studio 2022.  
-Ngôn ngữ: C++ 20.
-## Về chức năng
+**System Information**  
+- Operating System: Windows 10 Home Single Language.
+- IDE: Visual Studio 2022.
+- Programming Language: C++ 20.
+
+## About Functionality
 ---
-### 1. Các chức năng đã hoàn thiện
-- Sử dụng phương pháp lập trình hướng đối tượng.
-- Đọc danh sách các đối tượng in trong tập file theo đúng định dạng.
-- In thông tin các đối tượng ra màn hình (dạng bình thường và sắp xếp theo diện tích).
-- Sử dụng các mẫu thiết kế design pattern: 
-    - Singleton: Sử dụng cho lớp ParserFactory.
-    - Factory: Sử dụng cho lớp ParserFactory.
-    - Strategy: Sử dụng cho các lớp Parser (thừa kế từ IParser).
-    - Nguyên tắc dependency injection: Inject bằng cách thêm Parsers vào ParserFactor tại hàm main.
-- Sử dụng con trỏ thông minh để giải quyết vấn đề.
-- Bắt lỗi các xử lí ngoại lệ.
-- Bổ sung các đối tượng hình học khác (RegularHexagon, RegularPentagon, RegularOctagon).
-- Bổ sung Unit Test cho tất cả các lớp trong chương trình - trừ lớp PrintHandler phụ trách in vào console vì các hàm thuộc tính không trả về giá trị.
-- Tự phát tại liệu mô tả hệ thống. (Sử dụng Doxygen).
-- Comment đầy đủ ý nghĩa các hàm trong mã nguồn.
+### 1. Completed Features
+- Object-oriented programming approach.
+- Reading a list of shapes from a data file in the correct format.
+- Printing information about shapes to the screen (in normal format and sorted by area).
+- Using design patterns:
+    - Singleton: Used for the ParserFactory class.
+    - Factory: Used for the ParserFactory class.
+    - Strategy: Used for parsing classes (inherited from IParser).
+    - Dependency injection principle: Injection by adding parsers to the ParserFactory in the main function.
+- Using smart pointers to handle memory.
+- Handling exceptions.
+- Adding additional geometric shapes (RegularHexagon, RegularPentagon, RegularOctagon).
+- Implementing unit tests for all classes in the program, except for the PrintHandler class (which is responsible for console printing and does not return values).
+- Generating system documentation using Doxygen.
+- Providing meaningful comments for functions in the source code.
 
-### 2. Các chức năng chưa hoàn thiện
-- Không.
-### 3. Các chức năng không thực hiện
-- Tách các đối tượng thành thư viện liên kết động. (dll).
+### 2. Incomplete Features
+- None.
 
-## Về kiến thức đã tìm hiểu
--------
-### 1. Về các mẫu thiết kế Design Pattern 
+### 3. Unimplemented Features
+- Separating objects into dynamic link libraries (DLLs).
 
-Khi học về OOP, lúc đầu mới vào em sẽ không có biết được về các khái niệm và phương thức hoạt động của kĩ thuật OOP. Sau này khi đã học được hết các kiến thức cần thiết em nhận ra được sự thiếu sót của OOP - sự không đồng nhất, lãng phí (lặp đi lặp lại một mẫu code cùng cấp) và cả về các bài toán khó hoặc không thể giải được một cách gọn gàng. Lúc này em mới nhận ra sự cần thiết của một sự thống nhất trong kĩ thuật.
-
-Sau khi tìm hiểu về các mẫu Design Pattern cho đồ án, em đã có được một hiểu biết rộng hơn dù không toàn diện về các mẫu Design Patter. Sau đây em muốn trình bày một số điểm kiến thức thú vị em đã tìm hiểu được:
-
-- Mẫu singleton: Được sử dụng nếu muốn một lớp chỉ có một instance. Sử dụng khi muốn chương trình chỉ có 1 single-source-of-truth.
-    - Điểm mạnh: Tiết kiệm bộ nhớ. 
-    - Điểm yếu: Khó thực hiện Unit Test (khi test cũng sử dụng 1 instance giống nhau).
-    - Một số ví dụ về sử dụng singleton: Lớp có chứ seed cho random, lớp cho Factory (vì Factory cũng có kết hợp với Singleton).
-
-- Mẫu Factory: Không nên nhầm lần với mẫu Abstract Factory (tạo ra Factory). Mẫu Factory được dùng khi muốn tạo ra một instance của một loại lớp dựa vào điều kiện cụ thể - giống như một nhà máy sản xuất. Người phát triển sẽ yêu cầu một loại dụng cụ cụ thể và không cần biết được thao tác tạo ra dụng cụ đó - nhà máy sẽ đảm bảo thực hiện.
-    - Điểm mạnh: Dễ mở rộng chương trình và module hóa. Dễ bảo trì và update.
-    - Điểm yếu: Phức tạp để lập trình hơn và cần tạo nhiều file hơn.
-    - Một số ví dụ về việc sử dụng mẫu Factory: Lớp quản lí parser, lớp quản lí loại bánh...
-    
-- Mẫu Strategy: Mẫu được sử dụng khi muốn tạo ra một nhóm gia đình lớp với vai trò giống nhau nhưng có tác dụng khác nhau - như nhóm gia đình Hoạt động thể thao thì có chạy bộ, bơi...
-    - Điểm mạnh: Có thể thay đổi thuật toán trong lúc chạy chương trình.
-    - Điểm yếu: Số lượng lớp trong nhóm không được quá ít; Người dùng phải biết được có lớp nào để lựa chọn.
-    - Một số ví dụ về việc sử dụng mẫu Strategy: Các lớp parser, các lớp thuật toán sắp xếp khác nhau...
-
-### 2. Về Unit Test và thao tác sử dụng Chat GPT trong testing
-Việc sử dụng Unit Test là một thác tác mới đối với em. Kĩ thuật này khá là thú vị dùng để test rất nhanh code của mình mà không cần chạy code và kiểm tra console. 
-
-Một trong những việc em đã học được trong quá trình học viết và test bằng Unit Test là việc sử dụng AI (Chat GPT) trong việc tìm các trường hợp test và hỗ trợ viết test. Generative AI có khả năng tiếp xúc với lượng thông tin rất lớn nên rất hiệu quả trong ideation (các trường hợp test).
-
-Cụ thể, tuy code của Chat GPT rất nhiều trường hợp không đúng (tức là code sai syntax hoàn toàn), ý tưởng code thường có giá trị test. Việc chỉnh sửa để code không bị vấp và chạy được bình thường là công việc của nhà phát triển.
-
-Em nghĩ việc sử dụng AI trong programming và testing sẽ rất phát triển trong tương lai, và là một kiến thức giá trị để có.
-
-### 3. Về SOLID
-Trong quá trình học OOP, em đã tìm hiểu ra được các rule - quy định trong coding mà em thấy rất thú vị và có tính áp dụng. Cụ thể, các nguyên lý đó chính là SOLID:
-- Single responsity principle: Mỗi lớp chỉ nên chịu trách nhiệm về một nhiệm vụ cụ thể. Nghĩa mỗi lớp nên chỉ chịu trách nhiệm về một chức năng duy nhất.
-- Open/Close principle: Một lớp nên được mở để mở rộng nhưng đóng khi sửa đổi. Tức là hạn chế sửa đổi class và module có sẵn và nên ưu tiên mở rộng chúng. Suy nghĩ theo nguyên lý này cũng yêu cầu người lập trình phải suy nghĩ đến bảo trì và mở rộng của chươn trình.
-- Liskov Substitution: Kiểu con có thể thay thế kiểu cơ sở. Một trong những ví dụ phổ biến nhất về Liskov Substitution là vấn đề hình vuông/hình chữ nhật. Em thấy rằng LSP muốn người lập trình chú ý đến mô hình code của mình, và để ý nếu các lớp con có thật sự là con của một lớp cha hay không. 
-- Interface Segregation: Hiểu đơn giản là người dùng (client) không nên phụ thuộc vào phương thức mà họ không cần. Tức là nếu một interface có quá nhiều phương thức và nhiều loại client sử dụng các phương thức đó thì nên chia ra (segregation) các interface khác. Các client sẽ sử dụng các interface và phương thức họ cần dùng thay vì sử dụng một phần của một lớp lớn.
-- Dependency Inversion: Các module cấp cao không nên phụ thuộc vào các module cấp thấp và ngược lại. Nói một cách khác, mỗi thành phần trong hệ thống chỉ nên phụ thuộc vào các abstractions, không nên phụ thuộc vào các concretions hoặc implementations cụ thể. Ví dụ như các thành phần trên mainboard không thể kết nối với nhau nhưng kết nối với mainboard để thực hiện các công việc của chúng.
-
-Có một số các principle khác mà em thấy cũng rất thú vị, như:
-- DRY: Don't repeat yourself.
-- KISS: Keep it simple stupid. 
-
-Em nhận thấy mình chưa có đủ kinh nghiệm để áp dụng hoặc thành thạo trong việc tuân thủ các quy định, nguyên lý trên, nhưng việc biết về chúng và ý tưởng của chúng khiến cho các suy luận trong lập trình của em tốt hơn và dễ dàng hơn. Em nhận thấy đây là một số các ý tưởng cần được học và áp dụng nhiều hơn trong tương lai. 
-
-## Thanks and acknoledments
+## About Knowledge Acquired
 ---
-Em xin cảm ơn thầy Trần Duy Quang vì đã làm một giảng viên rất cởi mở và thoái mái, nhân nhượng. Em học không được nhanh như các bạn nên em rất cảm kích vì thầy sẽ giảng từ từ và thường giảng lại từ đầu nếu sinh viên không hiểu. Em cũng thích hạn bài tập môn học khá là dài nên em không bị áp lực deadline và cũng có nhiều thời gian để tìm hiểu các nội dung hơn. 
+### 1. About Design Patterns
 
-Em cũng muốn gửi lời cảm ơn thầy Lê Tuấn Thu là giảng viên môn thực hành OOP của mình. Thầy là người kiên nhẫn và hào phóng với sinh viên, và em rất cảm kích vì điều đó. 
+During my study of object-oriented programming, I initially lacked knowledge about the concepts and methods of OOP. As I progressed, I realized the shortcomings of OOP, such as lack of consistency, code redundancy, and difficulty in solving complex problems elegantly. It was at this point that I recognized the need for a more unified approach in software engineering.
 
+After studying design patterns for the project, I gained a broader understanding, though not comprehensive, of various design patterns. Here are some interesting insights I acquired:
+
+- Singleton Pattern: Used when you want a class to have only one instance. It helps ensure that there is a single source of truth in the program.
+    - Strengths: Memory-efficient.
+    - Weaknesses: Challenging for unit testing (as the same instance is used).
+    - Examples of Singleton usage: A class providing a random seed, a Factory class (as it often combines with Singleton).
+
+- Factory Pattern: Not to be confused with the Abstract Factory pattern (which creates factories). The Factory pattern is used when you want to create an instance of a class based on specific conditions, like a production factory. Developers request a specific tool, and they don't need to know how that tool is created – the factory ensures the creation.
+    - Strengths: Easy program/module expansion, maintainability, and updates.
+    - Weaknesses: More complex to implement and requires more files.
+    - Examples of Factory usage: Parser manager class, managing different types of pastries, etc.
+
+- Strategy Pattern: Used when you want to create a family of classes with similar roles but different functionalities – like a family of sports activities including running, swimming, etc.
+    - Strengths: Ability to change algorithms during runtime.
+    - Weaknesses: Requires a sufficient number of classes in the family; clients must know which class to choose.
+    - Examples of Strategy usage: Different parsers, various sorting algorithm classes, etc.
+
+### 2. About Unit Testing and Using Chat GPT in Testing
+
+Using unit tests was a new experience for me, and I found it fascinating as it allowed me to test my code quickly without running the code and checking the console.
+
+One valuable knowledge I gained during the process of writing and testing unit tests was the use of AI (Chat GPT) in finding test cases and supporting test writing. Generative AI has the capability to access a vast amount of information, making it efficient for ideation (generating test cases).
+
+Specifically, while the code generated by Chat GPT often contained syntax errors, the code ideas were valuable for testing. Fixing the code to make it error-free and runnable was the developer's responsibility.
+
+I believe that using AI in programming and testing will continue to evolve in the future and is valuable knowledge to have.
+
+### 3. About SOLID Principles
+
+During my study of OOP, I learned about important coding principles, which I found intriguing and applicable. These principles are encapsulated in the acronym SOLID:
+
+- Single Responsibility Principle (SRP): Each class should have only one reason to change, meaning it should have only one specific responsibility.
+- Open/Closed Principle (OCP): A class should be open for extension but closed for modification, emphasizing the importance of extending rather than modifying existing classes.
+- Liskov Substitution Principle (LSP): Subtypes must be substitutable for their base types, ensuring that derived classes truly inherit from their base classes.
+- Interface Segregation Principle (ISP): Clients should not be forced to depend on interfaces they do not use, advocating for breaking interfaces into smaller, specialized ones.
+- Dependency Inversion Principle (DIP): High-level modules should not depend on low-level modules; both should depend on abstractions, promoting loose coupling.
+
+There are other principles, such as DRY (Don't Repeat Yourself) and KISS (Keep It Simple, Stupid), which I find interesting as well. While I may not yet have the expertise to fully adhere to these principles, knowing about them and considering their concepts has improved my coding practices and made them more straightforward. I believe these are concepts I should continue to learn and apply in the future.
+
+## Thanks and Acknowledgments
+---
+I would like to express my gratitude to Professor Tran Duy Quang for being an open-minded and accommodating lecturer. I may not grasp concepts as quickly as others, and I appreciate that Professor Quang takes his time to explain things thoroughly and is willing to start from the beginning if students do not understand. I also appreciate the lengthy assignments in the course, which relieved the pressure of deadlines and allowed me ample time for deeper exploration of the topics.
+
+I also want to thank Professor Le Tuan Thu, my OOP practical class instructor. He is patient and generous with students, and I highly appreciate that.
