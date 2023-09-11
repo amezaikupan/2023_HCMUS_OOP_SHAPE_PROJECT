@@ -1,7 +1,8 @@
 # Shape Project - Object-Oriented Programming 21_3
-**Student ID:** 21120308  
-**Name:** Pham Le Tu Nhi  
-**Email:** pltnhi11@gmail.com
+
+This is a project for my OOP course. The project is written in OOP style, using the Shape interface to construct 8 class of Shape, and it also incorporate other Design Patterns: Singleton, Factory, Strategy.
+
+All the details of the project is below.
 
 ## Project Structure and Compilation Requirements
 ---
