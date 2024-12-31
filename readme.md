@@ -168,6 +168,6 @@ There are other principles, such as DRY (Don't Repeat Yourself) and KISS (Keep I
 
 ## Thanks and Acknowledgments
 ---
-I would like to express my gratitude to Professor Tran Duy Quang for being an open-minded and accommodating lecturer. I may not grasp concepts as quickly as others, and I appreciate that Professor Quang takes his time to explain things thoroughly and is willing to start from the beginning if students do not understand. I also appreciate the lengthy assignments in the course, which relieved the pressure of deadlines and allowed me ample time for deeper exploration of the topics.
+I would like to express my gratitude to our instructor Mr. Tran Duy Quang M.Sc for being an open-minded and accommodating lecturer. I may not grasp concepts as quickly as others, and I appreciate that Professor Quang takes his time to explain things thoroughly and is willing to start from the beginning if students do not understand. I also appreciate the lengthy assignments in the course, which relieved the pressure of deadlines and allowed me ample time for deeper exploration of the topics.
 
-I also want to thank Professor Le Tuan Thu, my OOP practical class instructor. He is patient and generous with students, and I highly appreciate that.
+I also want to thank Mr. Le Tuan Thu M.Sc, my OOP practical class instructor. He is patient and generous with students, and I highly appreciate that.
